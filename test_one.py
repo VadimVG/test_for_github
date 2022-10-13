@@ -1,14 +1,13 @@
-def dont_give_me_five(start,end):
-    x=[]
-    for i in range(start, end+1):
-        z=str(i)
-        if '5' in z:
-            continue
-        else:
-            x.append(i)
-    return len(x)
+def sort_by_length(arr):
+    d={}
+    l=[]
+    for i in arr:
+        d[len(i)]=i
+    for v, k in sorted(d.items()):
+        l.append(k)
+    return l
 
-print(dont_give_me_five(4,17))
+print(sort_by_length(["Telescopes", "Glasses", "Eyes", "Monocles"]))
 
 
 
